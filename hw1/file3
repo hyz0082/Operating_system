@@ -1,0 +1,13 @@
+-rw-rw-r-- 1 hyz hyz     0 Apr  6 22:21 file3
+-rw-rw-r-- 1 hyz hyz   119 Mar 25 21:37 Makefile
+-rw-rw-r-- 1 hyz hyz  2304 Apr  1 17:53 main.o
+-rw-rw-r-- 1 hyz hyz  3022 Apr  4 23:50 part1.out
+-rw-rw-r-- 1 hyz hyz   368 Mar 31 15:17 sample
+-rw-rw-r-- 1 hyz hyz   417 Mar 27 22:15 main.c
+-rw-rw-r-- 1 hyz hyz   450 Apr  5 00:49 myshell_func.h
+-rw-rw-r-- 1 hyz hyz  4824 Mar 27 22:51 myshell_func.c
+-rw-rw-r-- 1 hyz hyz   507 Apr  6 22:17 file
+-rw-rw-r-- 1 hyz hyz   553 Apr  6 22:19 file2
+-rw-rw-r-- 1 hyz hyz  7528 Apr  1 17:53 myshell_func.o
+-rwxrwxr-x 1 hyz hyz 17952 Apr  1 17:53 myshell
+total 68

@@ -1,0 +1,55 @@
+1. 
+ What is MMI/O?
+    Memory-mapped I/O (MMIO) is method of performing input/output (I/O) between the central processing unit (CPU) 
+    and peripheral devices in a computer. Memory-mapped I/O uses the same address space to address both memory and I/O devices. 
+    The memory and registers of the I/O devices are mapped to (associated with) address values. So when an address is accessed
+    by the CPU, it can refer to memory/register of the I/O device. Thus, the CPU instructions used to access the memory can also be used for accessing devices.    
+    (picture1)
+ How it works? 
+    In Linux can use ioremap()  : map physical address to kernel virtual address
+           	      mmap()    : creates a new mapping in the virtual address space of the calling process.
+2.
+ What is DMA?
+   Direct memory access (DMA) is a feature of computer systems that allows certain hardware subsystems to access main system memory (random-access memory) 
+   independent of the central processing unit (CPU).
+   Without DMA, when the CPU is using programmed input/output, it is typically fully occupied for the entire duration of the read or write operation, 
+   and is thus unavailable to perform other work. With DMA, the CPU first initiates the transfer, then it does other operations while the transfer is in progress,
+   and it finally receives an interrupt from the DMA controller (DMAC) when the operation is done.
+ How it works? 
+   like picture2 and picture3, there are simplified 5 step
+   1. cpu programs the DMA controller
+   2. DMA requests transfer to memory
+   3. Disk controller do data transferred
+   4. Act
+   5. reporting completion through interrupt when done
+
+3. (a) as corresponding picture in file
+   (b)       FCFS	SJF	Priority	RR
+      P1      8	18         17	        18
+      P2      9	 1	    1	         2
+      P3     11    	 4	    9	         7
+      P4     12   	 2	   18	         4
+      P5     18	10	    7	        16
+
+   (c)       FCFS	SJF	Priority	RR
+      P1      0	10   	    9	        10
+      P2      8	 0	    0	         1
+      P3      9	 2	    7	         5
+      P4     11	 1	   17	         3
+      P5     12    	 4	    1	        10
+   (d) "SJF" the total waiting time over all processes is 17.
+
+4.
+   When a system call is made, the operating system switches from the user-space part to
+ the kernel-space part. This structure is a remnant of the MULTICS design, in which the switch 
+ was just an ordinary procedure call, rather than a trap followed by
+ saving the state of the user-part, as it is in UNIX.(As figure 3-16 of textbook)
+
+ Subroutines are special cases of coroutines. When subroutines are invoked, execution begins at the start, 
+ and once a subroutine exits, it is finished; an instance of a subroutine only returns once, and does not hold state between invocations. 
+ By contrast, coroutines can exit by calling other coroutines, which may later return to the point where they were invoked in the original coroutine; 
+ from the coroutine's point of view, it is not exiting but calling another coroutine.
+
+ according to the above description,The process in the user space invokes the kernel space, the kernel space starts out in the same place.
+ So,it is like a subroutine procedure.
+

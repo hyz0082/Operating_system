@@ -1,0 +1,17 @@
+1. yes 將某一個register和memory設為用來判斷是否enter_region的條件，最初將register設為1，memory設為0,
+   假如要enter_region，進行下列動作:
+   1.將register設為1 
+   2.swap register and memory 
+   3.判斷register是否為0，假如register為0則enter_region ,否則失敗
+   4.enter_region成功完成後離開時將memory改為0
+2. (a) beacuse Q is ∞，process 不中斷 => T/T+S
+   (b) Q > T 與(a)類似 T/T+S
+   (c) the number of context switching: m = ⌈T/Q⌉ => T/(T+S*m)
+   (d) if Q = S < T: 帶入上一題算式,答案約為 0.5; if Q = S > T ,跟(a)的結果相同
+   (e)Q nearly 0 => T / ∞ => 0
+3. 與send()無關,建立兩個thread,一個接收mailbox A,一個接收mailbox B
+4. A = 1
+   B = 1
+   C = 2
+   D = 2
+   但是fork後parent child的執行順序無法確定,因此這4列印出的順序不定,共4!種情況

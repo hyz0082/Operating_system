@@ -1,0 +1,55 @@
+1.
+-symbolic link:
+         symbolic link (also symlink or soft link) is a term for any file that 
+      contains a reference to another file or directory in the form of an absolute or relative path
+      and that affects pathname resolution.
+         A symbolic link contains a text string that is automatically interpreted and followed by the operating system 
+      as a path to another file or directory. This other file or directory is called the "target". 
+      The symbolic link is a second file that exists independently of its target. If a symbolic link is deleted, its target     
+      remains unaffected. 
+          storage of the target path within the data structures used for storing file information on disk (inodes). 
+      This space normally stores a list of disk block addresses allocated to a file. Thus, symlinks with short target 
+      paths are accessed quickly. 
+        
+   Advantage:
+          symbolic links can point to any file or directory irrespective of the volumes on which the link and target reside.
+      It could cross over different file systems.
+-hard link:
+         hard link is a directory entry that associates a name with a file on a file system. All directory-based file systems  
+      must have at least one hard link giving the original name for each file. The term “hard link” is usually only used in 
+      file systems that allow more than one hard link for the same file. hard link has the effect of giving one file multiple 
+      names (e.g. different names in different directories) all of which independently connect to the same data on the disk, 
+      none of which depends on any of the others.
+   Adventage:
+         hard links don't have size or speed penalty. Soft links takes a small extra amount of time to open the 
+      file. symbolic link also takes a small amount of space on the disk.The hard link can also be used as a backup plan in the 
+      system because each file is the same. Therefore, if we lose a file, we still have the others
+
+2.
+    no cluster related blocks:
+       (5+10+0.02)*100=1502 ms
+    cluster related blocks:
+       (0.1+10+0.02)*100=1012 ms
+3.
+   Number of frames     LRU     Optimal
+          1		20        20
+	  2		18    	  15
+	  3		15  	  11
+	  4		10	   8
+	  5	   	 8	   7
+	  6		 7	   7
+	  7		 7	   7
+4.
+        Contiguous   Linked   Indexed
+    a	201		1	 1
+    b	101	       52	 1
+    c	1		3	 1
+    d	198		1	 0
+    e	98	       52	 0
+5.
+	The virtual address in binary form is
+	0001 0001 0001 0010 0011 0100 0101 0110
+	Since the page size is 2^12,the page table size is 2^20
+	Therefore, the low-order 12 bits (0100 0101 0110) are used as the displacement into the page
+	the remaining 20 bits (0001 0001 0001 0010 0011) are used as the displacement in the page table.
+

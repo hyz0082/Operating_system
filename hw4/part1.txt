@@ -1,0 +1,42 @@
+1.
+    (a) •Pages are classified according to R and M
+        – Class 0: not referenced, not modified
+        – Class 1: not referenced, modified (R bit has been cleared!) 
+        – Class 2: referenced, not modified
+        – Class 3: referenced, modified
+        NRU removes page at random from lowest numbered non empty class
+        so, answer is Page 0, because it’s R = M = 0.
+     (b) Page 2, In the FIFO queue page 2 is the oldest loaded page.
+     (c) Page 1, page 1’s last reference time is 260,it is the oldest referenced time.
+     (d) second chance replace is following below rules
+         •Pages in list are sorted in FIFO order
+         •R bits are cleared regularly 
+         •If the R bit of the oldest page is set it is put at the end of the list
+         •If all the pages in the list have been referenced the page that 
+          was “recycled” will reappear with the R bit cleared and will be 
+          thrown away
+          The page 2’s R bit is 1, will put at the end of the list by FIFO replace scheduler.
+          and page 0 R bit is 0
+          so, answer is page 0
+2.
+    fifo queue:
+    (page load first)N <- G <- H <- D <- A <- L <- C <- B(most recently loaded page)
+    rules is same as 1.d 
+    so, answer is page D
+3. 
+    Virtual vs Physical Addresses
+    – Physical addresses refer to hardware addresses of physical memory.
+    – Virtual addresses refer to the virtual store viewed by the process
+    • virtual addresses might be the same as physical addresses
+    • might be different, in which case virtual addresses must be mapped into physical
+       addresses.Mapping is done by Memory Management Unit (MMU).
+    • virtual space is limited by size of virtual addresses (not physical addresses)
+    • virtual space and physical memory space are independent
+4.  
+    • Same concept as Second Chance, different implementation ,so choose same pages to replace
+5.
+    page 0	01101110
+    page 1	01001001
+    page 2	00110111
+    page 3	10001011
+    
